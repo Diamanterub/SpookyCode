@@ -40,7 +40,7 @@ body {
     width: 100%;
     background-image: url("../img/Background_LandingPage.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 h1 {
@@ -48,6 +48,9 @@ h1 {
 }
 
 .navBar {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
     background-color: #101B3B;
     width: 100%;
     height: 70px;
@@ -64,4 +67,160 @@ h1 {
     align-items: center;
 }
 
-.contentContainer {}
+.contentContainer {
+    display: inline-flex;
+    height: 100%;
+    width: 92%;
+    padding: 25px;
+    padding-top: 0px;
+    justify-content: space-between;
+}
+
+.titleStyle1 {
+    font-family: 'AmikoBold';
+    color: #ffffff;
+    margin-top: 80px;
+    width: 720px;   
+    font-size: 35px;
+}
+
+.titleStyle2 {  
+    font-family: 'AmikoBold';
+    color: #ffffff;
+}
+
+/* Login and Register div Stuff */
+
+.loginRegisterDiv {
+    margin-top: 120px;
+    width: 280px;
+    height: 310px;
+    background-color: #f5f8f8;
+}
+
+.loginRegisterHeader {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #EFF2E7;
+    border-bottom: #2D3653 solid 1.5px;
+}
+
+.headerTxt {
+    font-family: 'AmikoSemiBold';
+    font-size: 15px;
+    color: #101B3B;
+    padding-left: 10px;
+}
+
+.loginDiv {
+    height: 80%;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.loginDiv.hidden {
+    display: none;
+}
+
+.registerDiv {
+    height: 80%;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.registerDiv.hidden {
+    display: none;
+}
+
+.loginForm {
+    display: inline-flex;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+}
+
+.registerForm {
+    display: inline-flex;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-family: 'AmikoSemiBold';
+    font-size: 14px;
+    color: #101B3B;
+    padding-left: 10px;
+}
+
+.formInput {
+    height: 25px;
+    background-color: #2D3653;
+    border: none;
+    color: #ffffff;
+    font-family: 'AmikoRegular';
+    font-size: 12px;
+    width: 216px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+.formInput:focus-visible {
+    outline: none;
+}
+
+.LoginRegisterButton {
+    height: 30px;
+    background-color: #101B3B;
+    color: #ffffff;
+    width: 80px;
+    font-size: 16px;
+    border: none;
+}
+
+.LoginRegisterButton:focus-visible {
+    outline: none;
+}
+
+#changeLink {
+    font-family: 'AmikoSemiBold';
+    font-size: 12px;
+    color: #101B3B;
+    margin-top: 15px;
+}
+
+.responseMessage {
+    display: none;
+    font-size: 10px;
+    font-family: 'AmikoSemiBold';
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.responseMessage.error {
+    color: red;
+    display: block;
+}
+
+.responseMessage.success {
+    color: green;
+    display: block;
+}
+
+@media (min-width: 1700px) {
+    .titleStyle1 {
+        font-size: 45px;
+        width: 1050px;
+    }
+
+    .titleStyle2 {
+        font-size: 25px;
+    }
+}
