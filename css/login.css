@@ -1,0 +1,67 @@
+/* amiko-regular - latin */
+@font-face {
+    font-family: 'AmikoRegular';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/amiko-v12-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/amiko-v12-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* amiko-600 - latin */
+@font-face {
+    font-family: 'AmikoSemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/amiko-v12-latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/amiko-v12-latin-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* amiko-700 - latin */
+@font-face {
+    font-family: 'AmikoBold';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/amiko-v12-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/amiko-v12-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/Background_LandingPage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.navBar {
+    background-color: #101B3B;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    font-family: 'AmikoBold';
+    justify-content: center;
+}
+
+.titleImg {
+    display: inline-flex;
+    font-family: 'AmikoBold';
+    font-size: 15px;
+    color: #ffffff;
+    align-items: center;
+}
+
+.contentContainer {}
