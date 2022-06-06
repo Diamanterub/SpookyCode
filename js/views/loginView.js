@@ -46,6 +46,12 @@ function loginView() {
             responseLogin.innerHTML = "Login was Sucessful!"
             setTimeout(() => {
                 //Route to other stuff
+                let currentUser = User.getUserLogged()
+                if (currentUser.rank == "student") {
+                    location.href = "../../html/wiki.html"
+                } else if (currentUser.rank == "admin") {
+                    location.href = "../../html/wikiAdmin.html"
+                }
 
             }, 3000);
         } catch (e) {
