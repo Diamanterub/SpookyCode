@@ -91,7 +91,7 @@ h1 {
 }
 
 .searchInput {
-    height: 30px;
+    height: 35px;
     background-color: #2D3653;
     border: none;
     color: #ffffff;
@@ -104,14 +104,32 @@ h1 {
 
 
 .searchInput:focus-visible {
-    border: white 1.5px solid;
-    outline: none;
+    outline: white 1.5px solid;
 }
 
-.categoriesDiv{
+.categoriesDiv {
     width: 100%;
     height: 100vh;
-    background-color: royalblue;
-    
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 15px;
+}   
 
+.levelNeeded {
+    color: #ffffff;
+    font-family: "AmikoRegular";
+    font-size: 25px;
+    margin: 0px;
+}
+
+.category {
+    color: #ffffff;
+    font-family: "AmikoRegular";
+    padding-left: 10px;
+}
+
+.subCategory {
+    color: #ffffff;
+    font-family: "AmikoRegular";
+    padding-left: 25px;
 }

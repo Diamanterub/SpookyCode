@@ -26,23 +26,52 @@ function writeData() {
     if (!localStorage.categories) {
         //Users Default para aceder a diversas
         const categories = [{
-            JavascriptFundamentals: [{
-                title: "Javascript Fundamentals",
-                levelNeeded: 1,
-                subCategories: [{
-                    title: "Variables",
-                }, {
-                    title: "Data Types",
-                }, {
-                    title: "Operators",
-                }, {
-                    title: "Conditionals",
-                }, {
-                    title: "Loops",
-                }, {
-                    title: "Functions",
-                }]
+            title: "Javascript Fundamentals",
+            levelNeeded: 1,
+            subCategories: [{
+                title: "Variables",
+                url: "",
+                tags: [],
+                comments: [],
+                likes: 0,
+                questions: []
+            }, {
+                title: "Data Types",
+                url: "",
+                tags: [],
+                comments: [],
+                likes: 0,
+                questions: []
+            }, {
+                title: "Operators",
+                url: "",
+                tags: [],
+                comments: [],
+                likes: 0,
+                questions: []
+            }, {
+                title: "Conditionals",
+                url: "",
+                tags: [],
+                comments: [],
+                likes: 0,
+                questions: []
+            }, {
+                title: "Loops",
+                url: "",
+                tags: [],
+                comments: [],
+                likes: 0,
+                questions: []
+            }, {
+                title: "Functions",
+                url: "",
+                tags: [],
+                comments: [],
+                likes: 0,
+                questions: []
             }]
+
         }]
 
         ;
