@@ -102,11 +102,6 @@ h1 {
     padding-right: 5px;
 }
 
-.searchInput:focus-visible {
-    border: white 1.5px solid;
-    outline: none;
-}
-
 
 .searchInput:focus-visible {
     border: white 1.5px solid;

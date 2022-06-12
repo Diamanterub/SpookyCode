@@ -19,7 +19,7 @@ function loginView() {
     document.querySelector(".changeLinkRegister")?.addEventListener("click", () => {
         if (registerDiv.classList.contains("hidden")) {
             headerTxt.innerHTML = "Register"
-            loginRegisterDiv.style.height = 400 + "px"
+            loginRegisterDiv.style.height = 470 + "px"
             registerDiv.classList.toggle("hidden")
             loginDiv.classList.toggle("hidden")
         }
@@ -28,7 +28,7 @@ function loginView() {
     document.querySelector(".changeLinkLogin")?.addEventListener("click", () => {
         if (loginDiv.classList.contains("hidden")) {
             headerTxt.innerHTML = "Login"
-            loginRegisterDiv.style.height = 310 + "px"
+            loginRegisterDiv.style.height = 360 + "px"
             loginDiv.classList.toggle("hidden")
             registerDiv.classList.toggle("hidden")
         }
@@ -79,7 +79,7 @@ function loginView() {
 
             setTimeout(() => {
                 headerTxt.innerHTML = "Login"
-                loginRegisterDiv.style.height = 310 + "px"
+                loginRegisterDiv.style.height = 360 + "px"
                 loginDiv.classList.toggle("hidden")
                 registerDiv.classList.toggle("hidden")
             }, 3000);
