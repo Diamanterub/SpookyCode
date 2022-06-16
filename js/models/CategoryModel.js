@@ -27,7 +27,6 @@ export function getSubCategoryByName(name) {
     for (const category of categories) {
         for (let j = 0; j < category.subCategories.length; j++) {
             if (category.subCategories[j].title == name) {
-                console.log(category.subCategories[j]);
                 return category.subCategories[j]
             }
         }
@@ -46,17 +45,14 @@ export function getCategoryByName(name) {
 
 
 export function checkWhereSubCategoryIs(subCategorySelected) {
-    console.log(subCategorySelected);
     for (const category of categories) {
         for (let i = 0; i < category.subCategories.length; i++) { 
             if (category.subCategories[i].title == subCategorySelected) { 
-                console.log("Enter");
                 return category;
             }
         } 
     }
     return null;
-
 }
 
 

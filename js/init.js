@@ -30,45 +30,57 @@ function writeData() {
                 levelNeeded: 1,
                 subCategories: [{
                     title: "Variables",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
-                    likes: 0,
+                    likes: 10,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }, {
                     title: "Data Types",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
-                    likes: 0,
+                    likes: 15,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }, {
                     title: "Operators",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
-                    likes: 0,
+                    likes: 21,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }, {
                     title: "Conditionals",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
-                    likes: 0,
+                    likes: 5,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }, {
                     title: "Loops",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
-                    likes: 0,
+                    likes: 12,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }, {
                     title: "Functions",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
-                    likes: 0,
+                    likes: 33,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }]
 
@@ -78,17 +90,21 @@ function writeData() {
                 levelNeeded: 2,
                 subCategories: [{
                     title: "DOM",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
                     likes: 0,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }, {
                     title: "Events",
-                    url: "",
+                    url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
                     tags: [],
                     comments: [],
                     likes: 0,
+                    views: 0,
+                    dateAdded: "",
                     questions: []
                 }]
 

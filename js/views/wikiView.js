@@ -27,9 +27,9 @@ function wikiView() {
 
     let totalCategoriesHtml = document.querySelectorAll(".categoryNotSelected")
 
-    
+
     //Default
-    totalCategoriesHtml[0].classList.replace("categoryNotSelected","categorySelected")
+    totalCategoriesHtml[0].classList.replace("categoryNotSelected", "categorySelected")
 
     //Setup changing SubCategory and Category
 
@@ -55,22 +55,42 @@ function wikiView() {
             selectedSubCategory = categories.getSubCategoryByName(subCategory.innerHTML)
             selectedCategory = categories.checkWhereSubCategoryIs(subCategory.innerHTML)
             subCategory.classList.replace("subCategoryNotSelected", "subCategorySelected")
-
-
-            console.log(selectedCategory);
             totalCategoriesHtml.forEach(category => {
                 if (category.innerHTML == selectedCategory.title) {
                     category.classList.replace("categoryNotSelected", "categorySelected")
                 }
             });
-
-
-
-
         });
     });
 
 
+    //Video Related Stuff
+
+    let video = document.querySelector("#myVideo")
+    let source = document.querySelector(".videoSource")
+
+    //URL
+
+    source.src =  selectedSubCategory.url
+    video.load();
+    
+
+
+    //Setup the Video Url
+
+    //Setup the Video Data
+
+    //Setup the Tags
+
+    //Setup the Comments
+
+
+
+
+    // btnTest.addEventListener("click", () => {
+    //     // console.log(video.currentTime());
+    //     video.currentTime = 100 
+    // });
 
 
 }
