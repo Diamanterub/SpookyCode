@@ -26,53 +26,74 @@ function writeData() {
     if (!localStorage.categories) {
         //Users Default para aceder a diversas
         const categories = [{
-            title: "Javascript Fundamentals",
-            levelNeeded: 1,
-            subCategories: [{
-                title: "Variables",
-                url: "",
-                tags: [],
-                comments: [],
-                likes: 0,
-                questions: []
-            }, {
-                title: "Data Types",
-                url: "",
-                tags: [],
-                comments: [],
-                likes: 0,
-                questions: []
-            }, {
-                title: "Operators",
-                url: "",
-                tags: [],
-                comments: [],
-                likes: 0,
-                questions: []
-            }, {
-                title: "Conditionals",
-                url: "",
-                tags: [],
-                comments: [],
-                likes: 0,
-                questions: []
-            }, {
-                title: "Loops",
-                url: "",
-                tags: [],
-                comments: [],
-                likes: 0,
-                questions: []
-            }, {
-                title: "Functions",
-                url: "",
-                tags: [],
-                comments: [],
-                likes: 0,
-                questions: []
-            }]
+                title: "Javascript Fundamentals",
+                levelNeeded: 1,
+                subCategories: [{
+                    title: "Variables",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }, {
+                    title: "Data Types",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }, {
+                    title: "Operators",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }, {
+                    title: "Conditionals",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }, {
+                    title: "Loops",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }, {
+                    title: "Functions",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }]
 
-        }]
+            },
+            {
+                title: "Document Object Model",
+                levelNeeded: 2,
+                subCategories: [{
+                    title: "DOM",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }, {
+                    title: "Events",
+                    url: "",
+                    tags: [],
+                    comments: [],
+                    likes: 0,
+                    questions: []
+                }]
+
+            }
+        ]
 
         ;
         localStorage.setItem("categories", JSON.stringify(categories));

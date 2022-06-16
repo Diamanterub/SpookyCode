@@ -113,7 +113,7 @@ h1 {
     overflow-y: auto;
     overflow-x: hidden;
     padding-left: 15px;
-}   
+}
 
 .levelNeeded {
     color: #ffffff;
@@ -122,14 +122,26 @@ h1 {
     margin: 0px;
 }
 
-.category {
+.subCategoryNotSelected {
+    color: #A5AFCD;
+    font-family: "AmikoRegular";
+    padding-left: 25px;
+}
+
+.subCategorySelected {
     color: #ffffff;
+    font-family: "AmikoSemiBold";
+    padding-left: 25px;
+}
+
+.categoryNotSelected {
+    color: #A5AFCD;
     font-family: "AmikoRegular";
     padding-left: 10px;
 }
 
-.subCategory {
+.categorySelected {
     color: #ffffff;
-    font-family: "AmikoRegular";
-    padding-left: 25px;
+    font-family: "AmikoSemiBold";
+    padding-left: 10px;
 }
