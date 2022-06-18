@@ -65,6 +65,24 @@ export function updateCategories(changedCategory) {
 }
 
 
+export function commentOnSubCategory(subCategory, comment, user, date) {
+    
+    let index = categories.indexOf(subCategory);
+
+    subCategory.comments.push({
+        comment,
+        user,
+        date
+    })
+
+    //Update the localstorage array
+    categories[index + 1] = subCategory;
+    console.log(categories);
+    localStorage.setItem("categories", JSON.stringify(categories));
+
+}
+
+
 
 class Category {
     title = "";

@@ -32,8 +32,18 @@ function writeData() {
                 subCategories: [{
                     title: "Variables",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: ["1:20-Creating the Variables","5:24-Messing with Number Variables"],
-                    comments: [],
+                    videoTags: ["1:20-Creating the Variables","5:24-Messing with Number Variables"],
+                    tags:["Variables","Fundamentals"],
+                    comments: [{
+                        comment: "This is a comment",
+                        user: "aluno",
+                        date: "2020-01-01"
+                    },
+                    {
+                        comment: "This is another comment",
+                        user: "aluno",
+                        date: "2022-01-01"
+                    }],
                     likes: 10,
                     views: 15,
                     dateAdded: "1 April",
@@ -41,7 +51,8 @@ function writeData() {
                 }, {
                     title: "Data Types",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 15,
                     views: 10,
@@ -50,7 +61,8 @@ function writeData() {
                 }, {
                     title: "Operators",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 21,
                     views: 25,
@@ -59,7 +71,8 @@ function writeData() {
                 }, {
                     title: "Conditionals",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 5,
                     views: 55,
@@ -68,7 +81,8 @@ function writeData() {
                 }, {
                     title: "Loops",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 12,
                     views: 69,
@@ -77,7 +91,8 @@ function writeData() {
                 }, {
                     title: "Functions",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 33,
                     views: 98,
@@ -92,7 +107,8 @@ function writeData() {
                 subCategories: [{
                     title: "DOM",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 0,
                     views: 0,
@@ -101,7 +117,8 @@ function writeData() {
                 }, {
                     title: "Events",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags:[],
+                    videoTags: [],
                     comments: [],
                     likes: 0,
                     views: 0,

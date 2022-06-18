@@ -157,6 +157,7 @@ h1 {
     z-index: 1;
     position: sticky;
     top: 0;
+    background-color: #ffffff;
 }
 
 .subCategoryTitle {
@@ -214,15 +215,69 @@ h1 {
     margin: 0;
 }
 
-.tagsTxt{
+.tagContainer {
+    background-color: #101B3B;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50px;
+    border: 2px solid #101B3B;
+    margin-right: 10px;
+}
+
+.tag {
+    color: #ffffff;
+    font-family: "AmikoRegular";
+    font-size: 12px;
+    margin: 0;
+    padding: 5px;
+}
+
+.tags{
+    display: inline-flex;
+}
+
+.tagsTxt {
     font-family: "AmikoSemibold";
     font-size: 18px;
     color: #101B3B;
 }
 
-.tag{
+.videoTag {
     font-family: "AmikoRegular";
     font-size: 14px;
     color: #016bcc;
     text-decoration: underline;
+}
+
+.totalComments {
+    font-family: "AmikoSemibold";
+    font-size: 18px;
+    color: #101B3B;
+}
+
+.textArea {
+    resize: none;
+    border-color: #101B3B;
+    margin-top: 15px;
+    font-family: "AmikoRegular";
+    font-size: 14px;
+}
+
+.postComment {
+    margin-top: 20px;
+    height: 30px;
+    background-color: #101B3B;
+    color: #ffffff;
+    width: 80px;
+    font-size: 16px;
+    border: none;
+    margin-left: 94%;
+}
+
+.postComment:focus-visible {
+    outline: none;
+}
+
+.comments {
+    margin-top: 30px;
 }

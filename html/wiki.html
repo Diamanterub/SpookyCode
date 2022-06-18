@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="searchDiv">
-                <label style="font-family: 'AmikoRegular';color: #FFFFFF;font-size: 14px;" for="test">Search for video
+                <label style="font-family: 'AmikoRegular';color: #FFFFFF;font-size: 14px;" for="test">Search for
                     Tags</label>
                 <input class="searchInput" type="text">
             </div>
@@ -40,9 +40,9 @@
                 </div>
             </div>
             <div class="contentBody">
-                <div class="videoDiv" style="margin-top: 50px;">
+                <div class="videoDiv" style="margin-top: 25px;">
                     <video width="1300px" height="750" id="myVideo" controls="true">
-                        <source  class="videoSource" src="" type="video/mp4">
+                        <source class="videoSource" src="" type="video/mp4">
                     </video>
                     <div class="videoInfo">
                         <div class="block">
@@ -54,13 +54,39 @@
                             <p class="likes" id="videoInfoTxt " style="margin-right: 10px">160</p>
                         </div>
                     </div>
-                    <div class="videoTagsDiv">
+                    <div class="TagsDiv">
                         <p class="tagsTxt">Tags:</p>
+                        <div class="tags">
+
+                        </div>
+
+                    </div>
+                    <div class="videoTagsDiv">
+                        <p class="tagsTxt">Video Tags:</p>
                         <div class="videoTags">
 
 
 
                         </div>
+                    </div>
+                    <div class="commentsDiv">
+                        <p class="totalComments" style="margin-bottom: 5px;">TEST COMMENT TITLE</p>
+                        <p style="margin: 0;font-size: 14px;font-family: 'AmikoRegular';">Write your comment</p>
+
+                        <div style="display: flex;">
+                            <form class="commentClass">
+                                <textarea class="textArea" id="commentTextArea" name="comment" rows="10"
+                                    cols="159"></textarea>
+                                <br>
+                                <button type="button" class="postComment">Post</button>
+                            </form>
+                        </div>
+
+                        <div class="comments">
+
+
+                        </div>
+
                     </div>
 
 

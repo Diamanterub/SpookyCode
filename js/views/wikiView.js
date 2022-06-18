@@ -6,6 +6,7 @@ import * as User from "../models/UserModel.js";
 
 let selectedSubCategory;
 let selectedCategory;
+let currentUser = User.getUserLogged()
 
 wikiView()
 
@@ -67,6 +68,23 @@ function wikiView() {
         });
     });
 
+        // Register Mechanism
+        document.querySelector(".postComment")?.addEventListener("click", (event) => {
+            event.preventDefault();
+           let textArea = document.querySelector("#commentTextArea")
+            try {
+                let comment = textArea.value
+                if (comment.length > 0) {
+                    let date = Date.now()
+                    let today = new Date(date);
+                    categories.commentOnSubCategory(selectedSubCategory, comment,currentUser.username,today.toLocaleDateString())
+                    updateData()
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        });
+
     updateData()
 }
 
@@ -101,7 +119,7 @@ function updateData() {
     let likeIcon = document.querySelector("#likeBtn")
 
     //Keep the like on reload
-    let currentUser = User.getUserLogged()
+
     if (currentUser.likes.includes(selectedSubCategory.title)) {
         likeIcon.classList.replace("fa-regular", "fa-solid")
     } else {
@@ -129,11 +147,12 @@ function updateData() {
 
     //Setup the Tags
 
-    let divTags = document.querySelector(".videoTags")
+    let divTags = document.querySelector(".tags")
 
     divTags.innerHTML = ""
+
     selectedSubCategory.tags.forEach(tag => {
-        divTags.innerHTML += `<p class="tag">${tag}</p>`
+        divTags.innerHTML += `<div class = "tagContainer"><p class="tag">${tag}</p></div>`
     });
 
     let tags = document.querySelectorAll(".tag")
@@ -153,15 +172,49 @@ function updateData() {
         });
     });
 
+    //Setup the Video Tags
+
+    let divVideoTags = document.querySelector(".videoTags")
+
+    divVideoTags.innerHTML = ""
+    selectedSubCategory.videoTags.forEach(tag => {
+        divVideoTags.innerHTML += `<p class="videoTag">${tag}</p>`
+    });
+
+    let videoTags = document.querySelectorAll(".videoTag")
+
+    videoTags.forEach(tag => {
+        tag?.addEventListener("click", () => {
+            let tagInnerhtml = tag.innerHTML
+            tagInnerhtml = tagInnerhtml.split("-")[0]
+            tagInnerhtml = tagInnerhtml.split(":")
+            let minutes = parseInt(tagInnerhtml[0])
+            let seconds = parseInt(tagInnerhtml[1])
+            let time = minutes * 60 + seconds
+            if(time > 0){
+                video.currentTime = time
+                video.play()
+            }
+        });
+    });
+
     //Setup the Comments
 
+    let totalComments = document.querySelector(".totalComments")
+    totalComments.innerHTML = `${selectedSubCategory.comments.length} Comments`
 
+    //Setup the Comment List
 
-
-    // btnTest.addEventListener("click", () => {
-    //     // console.log(video.currentTime());
-    //     video.currentTime = 100 
-    // });
-
+    let comments = document.querySelector(".comments")
+    console.log(selectedSubCategory);
+    comments.innerHTML = ""
+    selectedSubCategory.comments.forEach(comment => {
+        comments.innerHTML += `<div class="commentContainer">
+        <p class="comment">${comment.comment}</p>
+        <p class="comment">${comment.date}</p>
+        <p class="commentAuthor">${comment.user}</p>
+        </div>`
+        
+    });
 
 }
