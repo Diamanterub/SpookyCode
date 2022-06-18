@@ -66,6 +66,7 @@ h1 {
     min-height: 100vh;
     width: 80%;
     overflow-y: auto;
+    height: 100vh;
 }
 
 .titleDiv {
@@ -203,6 +204,7 @@ h1 {
 
 #videoInfoTxt {
     font-family: "AmikoRegular";
+    color: #101B3B;
 }
 
 .likes {
@@ -210,4 +212,17 @@ h1 {
     font-size: 14px;
     color: #101B3B;
     margin: 0;
+}
+
+.tagsTxt{
+    font-family: "AmikoSemibold";
+    font-size: 18px;
+    color: #101B3B;
+}
+
+.tag{
+    font-family: "AmikoRegular";
+    font-size: 14px;
+    color: #016bcc;
+    text-decoration: underline;
 }

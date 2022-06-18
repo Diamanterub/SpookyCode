@@ -32,7 +32,7 @@ function writeData() {
                 subCategories: [{
                     title: "Variables",
                     url: "../videos/JavaScript for Beginners — Introduction To Variables.mp4",
-                    tags: [],
+                    tags: ["1:20-Creating the Variables","5:24-Messing with Number Variables"],
                     comments: [],
                     likes: 10,
                     views: 15,

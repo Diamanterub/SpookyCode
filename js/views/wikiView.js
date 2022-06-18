@@ -127,10 +127,31 @@ function updateData() {
     let likes = document.querySelector(".likes")
     likes.innerHTML = `${selectedSubCategory.likes}`
 
-
-
-
     //Setup the Tags
+
+    let divTags = document.querySelector(".videoTags")
+
+    divTags.innerHTML = ""
+    selectedSubCategory.tags.forEach(tag => {
+        divTags.innerHTML += `<p class="tag">${tag}</p>`
+    });
+
+    let tags = document.querySelectorAll(".tag")
+
+    tags.forEach(tag => {
+        tag?.addEventListener("click", () => {
+            let tagInnerhtml = tag.innerHTML
+            tagInnerhtml = tagInnerhtml.split("-")[0]
+            tagInnerhtml = tagInnerhtml.split(":")
+            let minutes = parseInt(tagInnerhtml[0])
+            let seconds = parseInt(tagInnerhtml[1])
+            let time = minutes * 60 + seconds
+            if(time > 0){
+                video.currentTime = time
+                video.play()
+            }
+        });
+    });
 
     //Setup the Comments
 
