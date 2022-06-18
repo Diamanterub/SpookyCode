@@ -46,13 +46,22 @@ export function getCategoryByName(name) {
 
 export function checkWhereSubCategoryIs(subCategorySelected) {
     for (const category of categories) {
-        for (let i = 0; i < category.subCategories.length; i++) { 
-            if (category.subCategories[i].title == subCategorySelected) { 
+        for (let i = 0; i < category.subCategories.length; i++) {
+            if (category.subCategories[i].title == subCategorySelected) {
                 return category;
             }
-        } 
+        }
     }
     return null;
+}
+
+export function updateCategories(changedCategory) {
+    for (let i = 0; i < categories.length; i++) {
+        if (categories[i].title == changedCategory.title) {
+            categories[i] = changedCategory;
+        }
+    }
+    localStorage.setItem("categories", JSON.stringify(categories));
 }
 
 

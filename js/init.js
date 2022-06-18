@@ -12,6 +12,7 @@ function writeData() {
                 username: "aluno",
                 email: "123a@gmail.com",
                 password: "pass1",
+                likes: [],
             },
             {
                 rank: "admin",
@@ -34,8 +35,8 @@ function writeData() {
                     tags: [],
                     comments: [],
                     likes: 10,
-                    views: 0,
-                    dateAdded: "",
+                    views: 15,
+                    dateAdded: "1 April",
                     questions: []
                 }, {
                     title: "Data Types",
@@ -43,8 +44,8 @@ function writeData() {
                     tags: [],
                     comments: [],
                     likes: 15,
-                    views: 0,
-                    dateAdded: "",
+                    views: 10,
+                    dateAdded: "5 April",
                     questions: []
                 }, {
                     title: "Operators",
@@ -52,8 +53,8 @@ function writeData() {
                     tags: [],
                     comments: [],
                     likes: 21,
-                    views: 0,
-                    dateAdded: "",
+                    views: 25,
+                    dateAdded: "10 April",
                     questions: []
                 }, {
                     title: "Conditionals",
@@ -61,8 +62,8 @@ function writeData() {
                     tags: [],
                     comments: [],
                     likes: 5,
-                    views: 0,
-                    dateAdded: "",
+                    views: 55,
+                    dateAdded: "21 April",
                     questions: []
                 }, {
                     title: "Loops",
@@ -70,8 +71,8 @@ function writeData() {
                     tags: [],
                     comments: [],
                     likes: 12,
-                    views: 0,
-                    dateAdded: "",
+                    views: 69,
+                    dateAdded: "15 April",
                     questions: []
                 }, {
                     title: "Functions",
@@ -79,8 +80,8 @@ function writeData() {
                     tags: [],
                     comments: [],
                     likes: 33,
-                    views: 0,
-                    dateAdded: "",
+                    views: 98,
+                    dateAdded: "22 April",
                     questions: []
                 }]
 

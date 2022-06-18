@@ -6,11 +6,11 @@ export function init() {
 }
 
 // Adding a user
-export function add(rank,username, email, password) {
+export function add(rank, username, email, password) {
     if (users.some((user) => user.email === email)) {
         throw Error(`User with this email: "${email}" already exists!`);
     } else {
-        users.push(new User(rank,username, email, password));
+        users.push(new User(rank, username, email, password));
         localStorage.setItem("users", JSON.stringify(users));
     }
 }
@@ -43,17 +43,41 @@ export function getUserLogged() {
     return JSON.parse(sessionStorage.getItem("loggedUser"));
 }
 
+export function setLikes(categoryName, action) {
+    let currentUser = getUserLogged();
+    let index = users.indexOf(currentUser);
+
+    if (action == "add") {
+        currentUser.likes.push(categoryName);
+    } else if (action == "remove") {
+        currentUser.likes.splice(currentUser.likes.indexOf(categoryName), 1);
+    }
+
+    //Update the localstorage array
+    users[index + 1] = currentUser;
+    localStorage.setItem("users", JSON.stringify(users));
+
+    //Update the logged user
+    sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
+}
+
+export function getLoggedUserLikes() {
+    return getUserLogged().likes;
+}
+
 
 class User {
     rank = "";
     username = "";
     email = "";
     password = "";
+    likes = []
 
-    constructor(rank,username,email, password) {
+    constructor(rank, username, email, password, likes) {
         this.rank = rank;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.likes = likes;
     }
 }

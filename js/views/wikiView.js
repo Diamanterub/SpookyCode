@@ -1,18 +1,21 @@
 import * as categories from "../models/CategoryModel.js";
+import * as User from "../models/UserModel.js";
 
+
+//Setup the categories
+
+let selectedSubCategory;
+let selectedCategory;
 
 wikiView()
 
 function wikiView() {
     categories.init();
-
-    let categoriesDiv = document.querySelector(".categoriesDiv")
-
-    //Setup the categories
+    User.init()
 
     let totalCategories = categories.getCategories();
-    let selectedSubCategory;
-    let selectedCategory;
+
+    let categoriesDiv = document.querySelector(".categoriesDiv")
 
     for (let i = 0; i < totalCategories.length; i++) {
         categoriesDiv.innerHTML += `<p class="levelNeeded">Level ${totalCategories[i].levelNeeded}</p>`
@@ -54,6 +57,7 @@ function wikiView() {
             //Find the subCategory object with the same title
             selectedSubCategory = categories.getSubCategoryByName(subCategory.innerHTML)
             selectedCategory = categories.checkWhereSubCategoryIs(subCategory.innerHTML)
+            updateData()
             subCategory.classList.replace("subCategoryNotSelected", "subCategorySelected")
             totalCategoriesHtml.forEach(category => {
                 if (category.innerHTML == selectedCategory.title) {
@@ -63,7 +67,10 @@ function wikiView() {
         });
     });
 
+    updateData()
+}
 
+function updateData() {
     //Video Related Stuff
 
     let video = document.querySelector("#myVideo")
@@ -71,14 +78,57 @@ function wikiView() {
 
     //URL
 
-    source.src =  selectedSubCategory.url
+    source.src = selectedSubCategory.url
     video.load();
-    
 
 
     //Setup the Video Url
 
     //Setup the Video Data
+
+    //Views
+
+    let viewsVideo = document.querySelector(".viewsVideo")
+    viewsVideo.innerHTML = `${selectedSubCategory.views} views`
+
+    //Date Added
+
+    let dateAdded = document.querySelector(".dateVideoAdded")
+    dateAdded.innerHTML = `| ${selectedSubCategory.dateAdded}`
+
+    //Likes
+
+    let likeIcon = document.querySelector("#likeBtn")
+
+    //Keep the like on reload
+    let currentUser = User.getUserLogged()
+    if (currentUser.likes.includes(selectedSubCategory.title)) {
+        likeIcon.classList.replace("fa-regular", "fa-solid")
+    } else {
+        likeIcon.classList.replace("fa-solid", "fa-regular")
+    }
+
+    likeIcon?.addEventListener("click", () => {
+        if (likeIcon.classList.contains("fa-regular")) {
+            selectedSubCategory.likes++;
+            likeIcon.classList.replace("fa-regular", "fa-solid")
+            categories.updateCategories(selectedSubCategory)
+            User.setLikes(selectedSubCategory.title, "add")
+        } else {
+            selectedSubCategory.likes--;
+            likeIcon.classList.replace("fa-solid", "fa-regular")
+            categories.updateCategories(selectedSubCategory)
+            User.setLikes(selectedSubCategory.title, "remove")
+        }
+        likes.innerHTML = `${selectedSubCategory.likes}`
+    });
+
+  
+    let likes = document.querySelector(".likes")
+    likes.innerHTML = `${selectedSubCategory.likes}`
+
+
+
 
     //Setup the Tags
 

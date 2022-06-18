@@ -189,7 +189,7 @@ h1 {
 .videoInfo {
     background-color: #eff2f7;
     height: 35px;
-    top: -5px;
+    top: -3px;
     position: relative;
     display: flex;
 }
@@ -203,4 +203,11 @@ h1 {
 
 #videoInfoTxt {
     font-family: "AmikoRegular";
+}
+
+.likes {
+    font-family: "AmikoRegular";
+    font-size: 14px;
+    color: #101B3B;
+    margin: 0;
 }
