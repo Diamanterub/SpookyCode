@@ -8,6 +8,7 @@ function writeData() {
     if (!localStorage.users) {
         //Users Default para aceder a diversas
         const users = [{
+                blocked: false,
                 rank: "student",
                 username: "aluno",
                 email: "123a@gmail.com",
@@ -15,6 +16,7 @@ function writeData() {
                 likes: [],
             },
             {
+                blocked: false,
                 rank: "admin",
                 username: "professor",
                 email: "123p@gmail.com",
