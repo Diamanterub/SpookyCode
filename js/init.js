@@ -25,6 +25,24 @@ function writeData() {
         ];
         localStorage.setItem("users", JSON.stringify(users));
     }
+    if(!sessionStorage.selectedSubCategory)
+    {
+
+        const dummmy = {
+            title: "Variables",
+            url: "../videos/Variables.mp4",
+            videoTags: ["1:20-Creating the Variables","5:24-Messing with Number Variables"],
+            tags:["Variables","Fundamentals"],
+            comments: [{
+                videoTag: "1:20-Creating the Variables",
+                comment: "This is a comment",
+                user: "aluno",
+                date: "2020-01-01"
+            }]
+        }
+        sessionStorage.setItem("selectedSubCategory", JSON.stringify(dummmy));
+
+    }
     // Categories
     if (!localStorage.categories) {
         //Users Default para aceder a diversas
