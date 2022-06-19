@@ -78,12 +78,21 @@ function writeData() {
                     dateAdded: "1 April",
                     exercise: [{
                             type: "multipleChoice",
+                            xpPerQuestionCorrect:10,
                             question: "What is the correct way to declare a variable with naming convention snakeCase?",
                             answers: ["let snakeCase", "let snakecase", "let snakecasE", "let snake_case"],
                             correctAnswer: "let snake_case",
                         },
                         {
+                            type: "multipleChoice",
+                            xpPerQuestionCorrect:10,
+                            question: "I am Tired?",
+                            answers: ["Yes", "No", "Maybe", "Tft"],
+                            correctAnswer: "Yes",
+                        },
+                        {
                             type: "editor",
+                            xpPerQuestionCorrect:10,
                             question: "declare a variable with naming convention snakeCase?",
                             correctAnswer: "let snake_case",
                         }

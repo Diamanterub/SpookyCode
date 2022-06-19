@@ -176,7 +176,7 @@ h1 {
     color: #101B3B;
 }
 
-.exerciseDiv {
+.exerciseDivLink {
     display: inline-flex;
     align-items: center;
     cursor: pointer;

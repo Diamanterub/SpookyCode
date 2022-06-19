@@ -1,5 +1,4 @@
 import * as categories from "../models/CategoryModel.js";
-
 import * as wikiView from "../views/wikiView.js";
 
 let selectedSubCategory;
@@ -13,7 +12,6 @@ function menuView()
     let totalCategories = categories.getCategories();
 
     let categoriesDiv = document.querySelector(".categoriesDiv")
-    console.log(categoriesDiv);
 
     for (let i = 0; i < totalCategories.length; i++) {
         categoriesDiv.innerHTML += `<p class="levelNeeded">Level ${totalCategories[i].levelNeeded}</p>`
@@ -26,7 +24,7 @@ function menuView()
         updateData()
         if(location.href.includes("wiki"))
         {
-            wikiView.updateData()
+        wikiView.updateData()
         }
     }
 

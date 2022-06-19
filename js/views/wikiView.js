@@ -26,7 +26,7 @@ export function updateData() {
 
 
     //Exercise
-    let exercise = document.querySelector(".exerciseDiv")
+    let exercise = document.querySelector(".exerciseDivLink")
 
     exercise?.addEventListener("click", () => {
         location.href = "../../html/exercise.html"
@@ -41,7 +41,6 @@ export function updateData() {
 
     source.src = selectedSubCategory.url
     video.load();
-
 
     //Setup the Video Data
 

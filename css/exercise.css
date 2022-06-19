@@ -71,3 +71,119 @@
     color: #ffffff;
     margin-top: 25px;
 }
+
+.level {
+    font-family: "AmikoRegular";
+    font-size: 16px;
+    margin: 0px;
+    color: #ffffff;
+    margin-top: 25px;
+}
+
+.pointsUntilNextLevel {
+    font-family: "AmikoRegular";
+    font-size: 12px;
+    margin: 0px;
+    color: #ffffff;
+    margin-top: 5px;
+
+}
+
+.previousResult {
+    font-family: "AmikoRegular";
+    font-size: 16px;
+    margin: 0px;
+    color: #ffffff;
+    margin-top: 25px;
+}
+
+.exerciseDiv {
+    display: inline-flex;
+    cursor: pointer;
+    flex-direction: column;
+    width: 80%;
+}
+
+.exerciseHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.questionDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #f5f8f8;
+}
+
+.questionHeader {
+    width: -webkit-fill-available;
+    background-color: #EFF2F7;
+    color: #101B3B;
+    font-family: "AmikoSemiBold";
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.question {
+    margin: 0;
+}
+
+.exerciseTitle {
+    font-family: "AmikoBold";
+    font-size: 30px;
+    margin: 0;
+}
+
+.pointsPerQuestion {
+    font-family: "AmikoRegular";
+    font-size: 20px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.questionBody {
+    width: 100%;
+    min-height: 500px;
+}
+
+.answer {
+    font-family: "AmikoRegular";
+    font-size: 20px;
+    padding-left: 10px;
+    cursor: default;
+}
+
+.inputRadio {
+    margin-top: 0;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+}
+
+.actionDiv {
+    font-family: "AmikoRegular";
+    font-size: 14px;
+    color: #101B3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit {
+    height: 30px;
+    background-color: #101B3B;
+    color: #ffffff;
+    width: 120px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit:focus-visible {
+    outline: none;
+}
