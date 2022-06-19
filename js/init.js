@@ -13,7 +13,10 @@ function writeData() {
                 username: "aluno",
                 email: "123a@gmail.com",
                 password: "pass1",
-                likes: [],
+                level: 1,
+                xp: 0,
+                likes: [],  
+                exercisesDone: [],
             },
             {
                 blocked: false,
@@ -25,14 +28,17 @@ function writeData() {
         ];
         localStorage.setItem("users", JSON.stringify(users));
     }
-    if(!sessionStorage.selectedSubCategory)
-    {
+    if (!localStorage.xpPerLevel) {
+        const xpPerLevel = [0, 1000, 2000, 3000, 4000, 5000];
+        localStorage.setItem("xpPerLevel", JSON.stringify(xpPerLevel));
+    }
+    if (!sessionStorage.selectedSubCategory) {
 
         const dummmy = {
             title: "Variables",
             url: "../videos/Variables.mp4",
-            videoTags: ["1:20-Creating the Variables","5:24-Messing with Number Variables"],
-            tags:["Variables","Fundamentals"],
+            videoTags: ["1:20-Creating the Variables", "5:24-Messing with Number Variables"],
+            tags: ["Variables", "Fundamentals"],
             comments: [{
                 videoTag: "1:20-Creating the Variables",
                 comment: "This is a comment",
@@ -52,28 +58,40 @@ function writeData() {
                 subCategories: [{
                     title: "Variables",
                     url: "../videos/Variables.mp4",
-                    videoTags: ["1:20-Creating the Variables","5:24-Messing with Number Variables"],
-                    tags:["Variables","Fundamentals"],
+                    videoTags: ["1:20-Creating the Variables", "5:24-Messing with Number Variables"],
+                    tags: ["Variables", "Fundamentals"],
                     comments: [{
-                        videoTag: "1:20-Creating the Variables",
-                        comment: "This is a comment",
-                        user: "aluno",
-                        date: "2020-01-01"
-                    },
-                    {
-                        videoTag: "1:20-Creating the Variables",
-                        comment: "This is another comment",
-                        user: "aluno",
-                        date: "2022-01-01"
-                    }],
+                            videoTag: "1:20-Creating the Variables",
+                            comment: "This is a comment",
+                            user: "aluno",
+                            date: "2020-01-01"
+                        },
+                        {
+                            videoTag: "1:20-Creating the Variables",
+                            comment: "This is another comment",
+                            user: "aluno",
+                            date: "2022-01-01"
+                        }
+                    ],
                     likes: 10,
                     views: 15,
                     dateAdded: "1 April",
-                    questions: []
+                    exercise: [{
+                            type: "multipleChoice",
+                            question: "What is the correct way to declare a variable with naming convention snakeCase?",
+                            answers: ["let snakeCase", "let snakecase", "let snakecasE", "let snake_case"],
+                            correctAnswer: "let snake_case",
+                        },
+                        {
+                            type: "editor",
+                            question: "declare a variable with naming convention snakeCase?",
+                            correctAnswer: "let snake_case",
+                        }
+                    ]
                 }, {
                     title: "Data Types",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 15,
@@ -83,7 +101,7 @@ function writeData() {
                 }, {
                     title: "Operators",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 21,
@@ -93,7 +111,7 @@ function writeData() {
                 }, {
                     title: "Conditionals",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 5,
@@ -103,7 +121,7 @@ function writeData() {
                 }, {
                     title: "Loops",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 12,
@@ -113,7 +131,7 @@ function writeData() {
                 }, {
                     title: "Functions",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 33,
@@ -129,7 +147,7 @@ function writeData() {
                 subCategories: [{
                     title: "DOM",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 0,
@@ -139,7 +157,7 @@ function writeData() {
                 }, {
                     title: "Events",
                     url: "../videos/Variables.mp4",
-                    tags:[],
+                    tags: [],
                     videoTags: [],
                     comments: [],
                     likes: 0,

@@ -73,7 +73,7 @@ function loginView() {
                 responseRegister.classList.toggle("error")
                 responseRegister.innerHTML = "Password and Confirm Password are not equal"
             }
-            User.add("student", registerUsername.value, registerEmail.value, registerPassword.value);
+            User.add(false,"student", registerUsername.value, registerEmail.value, registerPassword.value,0,0,[],[]);
             responseRegister.classList.toggle("success")
             responseRegister.innerHTML = "User registered with success!"
 

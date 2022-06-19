@@ -1,4 +1,5 @@
 import * as categories from "../models/CategoryModel.js";
+
 import * as wikiView from "../views/wikiView.js";
 
 let selectedSubCategory;
@@ -12,6 +13,7 @@ function menuView()
     let totalCategories = categories.getCategories();
 
     let categoriesDiv = document.querySelector(".categoriesDiv")
+    console.log(categoriesDiv);
 
     for (let i = 0; i < totalCategories.length; i++) {
         categoriesDiv.innerHTML += `<p class="levelNeeded">Level ${totalCategories[i].levelNeeded}</p>`
@@ -22,7 +24,10 @@ function menuView()
         selectedSubCategory = totalCategories[0].subCategories[0]
         selectedCategory = totalCategories[0]
         updateData()
-        wikiView.updateData()
+        if(location.href.includes("wiki"))
+        {
+            wikiView.updateData()
+        }
     }
 
 
@@ -56,7 +61,10 @@ function menuView()
             selectedSubCategory = categories.getSubCategoryByName(subCategory.innerHTML)
             selectedCategory = categories.checkWhereSubCategoryIs(subCategory.innerHTML)
             updateData()
-            wikiView.updateData()
+            if(location.href.includes("wiki"))
+            {
+                wikiView.updateData()
+            }
             subCategory.classList.replace("subCategoryNotSelected", "subCategorySelected")
             totalCategoriesHtml.forEach(category => {
                 if (category.innerHTML == selectedCategory.title) {
@@ -66,7 +74,11 @@ function menuView()
         });
     });
     updateData()
-    wikiView.updateData()
+    if(location.href.includes("wiki"))
+    {
+        wikiView.updateData()
+    }
+
 }
 
 function updateData()

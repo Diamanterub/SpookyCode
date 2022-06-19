@@ -7,7 +7,10 @@ wikiView()
 function wikiView() {
     categories.init();
     User.init()
-    updateData()
+    if(location.href.includes("wiki"))
+    {
+        updateData()
+    }
 }
 
 export function updateData() {
@@ -16,9 +19,19 @@ export function updateData() {
     let selectedSubCategory = JSON.parse(sessionStorage.getItem("selectedSubCategory"));
     let currentUser = User.getUserLogged()
 
-    let title = document.querySelector(".subCategoryTitle")
+    //Header
 
+    let title = document.querySelector(".subCategoryTitle")
     title.innerHTML = selectedSubCategory.title
+
+
+    //Exercise
+    let exercise = document.querySelector(".exerciseDiv")
+
+    exercise?.addEventListener("click", () => {
+        location.href = "../../html/exercise.html"
+    });
+
     //Video Related Stuff
 
     let video = document.querySelector("#myVideo")

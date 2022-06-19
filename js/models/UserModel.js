@@ -1,4 +1,4 @@
-let users;
+let     users;
 
 // Getting the users from localstorage
 export function init() {
@@ -6,11 +6,11 @@ export function init() {
 }
 
 // Adding a user
-export function add(rank, username, email, password) {
+export function add(blocked = false ,rank, username, email, password,level = 0, xp = 0, likes = [], exercisesDone = []) {
     if (users.some((user) => user.email === email)) {
         throw Error(`User with this email: "${email}" already exists!`);
     } else {
-        users.push(new User(rank, username, email, password));
+        users.push(new User(blocked,rank, username, email, password,level, xp, likes, exercisesDone));
         localStorage.setItem("users", JSON.stringify(users));
     }
 }
@@ -67,17 +67,25 @@ export function getLoggedUserLikes() {
 
 
 class User {
+    blocked = false;
     rank = "";
     username = "";
     email = "";
     password = "";
+    level = 0;
     likes = []
+    xp = 0;
+    exercisesDone = [];
 
-    constructor(rank, username, email, password, likes) {
+    constructor(blocked,rank, username, email, password, likes,level, xp, exercisesDone) {
+        this.blocked = blocked
         this.rank = rank;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.level = level
         this.likes = likes;
+        this.xp = xp
+        this.exercisesDone = exercisesDone
     }
 }
