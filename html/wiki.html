@@ -41,20 +41,23 @@
             </div>
             <div class="contentBody">
                 <div class="videoDiv" style="margin-top: 25px;">
-                    <video width="1300px" height="750" id="myVideo" controls="true">
+                    <video width="1300px" height="730" id="myVideo" controls="true">
                         <source class="videoSource" src="" type="video/mp4">
                     </video>
                     <div class="videoInfo">
                         <div class="block">
                             <p class="viewsVideo" id="videoInfoTxt" style="margin-left: 10px">420 views</p>
+                            <p id="videoInfoTxt" style="margin-left:10px">|</p>
                             <p class="dateVideoAdded" id="videoInfoTxt" style="margin-left: 10px">| April 28</p>
                         </div>
                         <div class="block" style="justify-content: flex-end;">
+                            <i class=" test fa-solid fa-share" style="margin-right: 10px"></i>
+                            <p id="videoInfoTxt" style="margin-right:10px">|</p>
                             <i id="likeBtn" class="fa-regular fa-thumbs-up fa-lg" style="margin-right: 10px"></i>
                             <p class="likes" id="videoInfoTxt " style="margin-right: 10px">160</p>
                         </div>
                     </div>
-                    <div class="TagsDiv">
+                    <div class="TagsDiv" style="margin-top: 25px;">
                         <p class="tagsTxt">Tags:</p>
                         <div class="tags">
 
@@ -69,33 +72,32 @@
 
                         </div>
                     </div>
+                    <div class="line"></div>
                     <div class="commentsDiv">
                         <p class="totalComments" style="margin-bottom: 5px;">TEST COMMENT TITLE</p>
                         <p style="margin: 0;font-size: 14px;font-family: 'AmikoRegular';">Write your comment</p>
 
                         <div style="display: flex;">
                             <form class="commentClass">
-                                <textarea class="textArea" id="commentTextArea" name="comment" rows="10"
+                                <p class="tagComment">You can select a specific video tag to comment</p>
+                                <select name="tags" id="tagComment">
+                                    <option value="default" selected>None</option>
+
+                                </select>
+                                <br>
+                                <textarea class="textArea" id="commentTextArea" name="comment" rows="10" required
                                     cols="159"></textarea>
                                 <br>
                                 <button type="button" class="postComment">Post</button>
                             </form>
                         </div>
-
                         <div class="comments">
-
-
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
-
         </div>
     </div>
-
 </body>
 
 

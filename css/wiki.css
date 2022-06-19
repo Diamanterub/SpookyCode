@@ -230,15 +230,18 @@ h1 {
     font-size: 12px;
     margin: 0;
     padding: 5px;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+
 }
 
-.tags{
+.tags {
     display: inline-flex;
 }
 
 .tagsTxt {
     font-family: "AmikoSemibold";
-    font-size: 18px;
+    font-size: 20px;
     color: #101B3B;
 }
 
@@ -247,12 +250,24 @@ h1 {
     font-size: 14px;
     color: #016bcc;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.line{
+    margin-top: 50px;
+    width: 100%;
+    border: 1px #101B3B solid;
+}
+
+.commentsDiv{
+    
 }
 
 .totalComments {
     font-family: "AmikoSemibold";
-    font-size: 18px;
+    font-size: 20px;
     color: #101B3B;
+    margin-top: 25px;
 }
 
 .textArea {
@@ -278,6 +293,49 @@ h1 {
     outline: none;
 }
 
+.tagComment{
+    font-family: "AmikoRegular";
+    font-size: 13px;
+    color: #101B3B;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
 .comments {
     margin-top: 30px;
+}
+
+.commentContainer {
+    background-color: #eff2f7;
+    height: 100px;
+    border-color: #101B3B;
+    border: 1px solid;
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.commentAuthor {
+    font-family: "AmikoSemibold";
+    font-size: 16px;
+    color: #101B3B;
+    margin-left: 15px;
+    margin: 0;
+}
+
+.comment{
+    font-family: "AmikoRegular";
+    font-size: 14px;
+    color: #101B3B;
+    margin: 0;
+    width: 1190px;
+}
+
+#tagComment{
+    font-family: "AmikoRegular";
+    font-size: 13px;
+    color: #101B3B;
+    margin: 0;
+    height: 30px;
+    border-color: #101B3B;
 }
