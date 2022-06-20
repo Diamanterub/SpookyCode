@@ -1,0 +1,49 @@
+label {
+    font-size: 18px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background-color: #101b3b;
+    color: white;
+}
+
+.content {
+    min-height: 100vh;
+    background-color: #2d3653;
+    color: white;
+}
+
+.activeTab {
+    color: white !important;
+}
+
+.inactiveTab {
+    color: rgba(255, 255, 255, 0.5) !important;
+    transition: 0.2s ease-in-out;
+}
+
+.inactiveTab:hover {
+    color: white !important;
+    transition: 0.2s ease-in-out;
+}
+
+.tboption {
+    background-color: #2d3653;
+    border: none;
+    color: white !important;
+}
+
+th,
+td {
+    color: white;
+}

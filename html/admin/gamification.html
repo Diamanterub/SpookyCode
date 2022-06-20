@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpookyCode || Admin</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- CUSTOM STYLES A TUA PRIMA -->
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-3 sidebar">
+            <div class="container">
+                <div class="mt-5 d-flex align-items-center">
+                    <img src="../../img/Logo.png" alt="SpookyCode" class="float-start">
+                    <h1 class="ms-3">Gamification</h1>
+                </div>
+                <div class="mx-auto w-50 mt-5">
+                    <h5 class="activeTab">1 - Management</h5>
+                    <ul class="mt-3">
+                        <h6>
+                            <li>
+                                <a class="inactiveTab" href="/html/admin/addcontent.html">Add Content</a>
+                            </li>
+                        </h6>
+                        <h6>
+                            <li>
+                                <a class="inactiveTab" href="/html/admin/listofcategories.html">List of Categories</a>
+                            </li>
+                        </h6>
+                        <h6>
+                            <li>
+                                <a class="inactiveTab" href="/html/admin/usermanagement.html">User Management</a>
+                            </li>
+                        </h6>
+                        <h6>
+                            <li>
+                                <a class="activeTab" href="#">Gamification</a>
+                            </li>
+                        </h6>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 content">
+
+            <div class="container">
+                <div class="mt-5">
+                    <h1 class="mb-5">Gamification</h1>
+                </div>
+            </div>
+
+            <table class="table w-75 mx-auto">
+                <tbody>
+                    <tr>
+                        <td colspan="5">
+                            <div class="text-center d-flex justify-content-between">
+                                <input type="text" class="form-control" id="search" placeholder="Search">
+                                <button class="btn btn-primary ms-4" type="submit">Search</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

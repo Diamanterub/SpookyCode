@@ -16,7 +16,7 @@ function loginView() {
 
     //Switch between login and register
 
-    document.querySelector(".changeLinkRegister")?.addEventListener("click", () => {
+    document.querySelector(".changeLinkRegister").addEventListener("click", () => {
         if (registerDiv.classList.contains("hidden")) {
             headerTxt.innerHTML = "Register"
             loginRegisterDiv.style.height = 470 + "px"
@@ -25,7 +25,7 @@ function loginView() {
         }
     });
 
-    document.querySelector(".changeLinkLogin")?.addEventListener("click", () => {
+    document.querySelector(".changeLinkLogin").addEventListener("click", () => {
         if (loginDiv.classList.contains("hidden")) {
             headerTxt.innerHTML = "Login"
             loginRegisterDiv.style.height = 360 + "px"
@@ -35,7 +35,7 @@ function loginView() {
     })
 
     // Login Mechanism
-    document.querySelector("#loginForm")?.addEventListener("submit", (event) => {
+    document.querySelector("#loginForm").addEventListener("submit", (event) => {
         event.preventDefault();
         try {
             User.login(
@@ -50,7 +50,7 @@ function loginView() {
                 if (currentUser.rank == "student") {
                     location.href = "../../html/wiki.html"
                 } else if (currentUser.rank == "admin") {
-                    location.href = "../../html/wikiAdmin.html"
+                    location.href = "../../html/admin/addcontent.html"
                 }
 
             }, 3000);
@@ -61,28 +61,28 @@ function loginView() {
     });
 
     // Register Mechanism
-    document.querySelector("#registerForm")?.addEventListener("submit", (event) => {
+    document.querySelector("#registerForm").addEventListener("submit", (event) => {
         event.preventDefault();
         const registerUsername = document.getElementById("formUsername");
         const registerEmail = document.getElementById("formEmail");
         const registerPassword = document.getElementById("formPassword");
         const registerPassword2 = document.getElementById("formConfirmPassword");
         try {
-            console.log(responseRegister);
-            if (registerPassword.value !== registerPassword2.value) {
+            if (registerPassword.value != registerPassword2.value) {
                 responseRegister.classList.toggle("error")
                 responseRegister.innerHTML = "Password and Confirm Password are not equal"
-            }
-            User.add(false,"student", registerUsername.value, registerEmail.value, registerPassword.value,0,0,[],[]);
-            responseRegister.classList.toggle("success")
-            responseRegister.innerHTML = "User registered with success!"
+            } else {
+                User.add(false, "student", registerUsername.value, registerEmail.value, registerPassword.value, 0, 0, [], []);
+                responseRegister.classList.toggle("success")
+                responseRegister.innerHTML = "User registered with success!"
 
-            setTimeout(() => {
-                headerTxt.innerHTML = "Login"
-                loginRegisterDiv.style.height = 360 + "px"
-                loginDiv.classList.toggle("hidden")
-                registerDiv.classList.toggle("hidden")
-            }, 3000);
+                setTimeout(() => {
+                    headerTxt.innerHTML = "Login"
+                    loginRegisterDiv.style.height = 360 + "px"
+                    loginDiv.classList.toggle("hidden")
+                    registerDiv.classList.toggle("hidden")
+                }, 3000);
+            }
         } catch (e) {
             responseRegister.classList.toggle("error")
             responseRegister.innerHTML = "Error registering user"

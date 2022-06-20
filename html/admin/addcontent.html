@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpookyCode || Admin</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- CUSTOM STYLES A TUA PRIMA -->
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-3 sidebar">
+            <div class="container">
+                <div class="mt-5 d-flex align-items-center">
+                    <img src="../../img/Logo.png" alt="SpookyCode" class="float-start">
+                    <h1 class="ms-3">Add Content</h1>
+                </div>
+                <div class="mx-auto w-50 mt-5">
+                    <h5 class="activeTab">1 - Management</h5>
+                    <ul class="mt-3">
+                        <h6>
+                            <li>
+                                <a class="activeTab" href="#">Add Content</a>
+                            </li>
+                        </h6>
+                        <h6>
+                            <li>
+                                <a class="inactiveTab" href="/html/admin/listofcategories.html">List of Categories</a>
+                            </li>
+                        </h6>
+                        <h6>
+                            <li>
+                                <a class="inactiveTab" href="/html/admin/usermanagement.html">User Management</a>
+                            </li>
+                        </h6>
+                        <h6>
+                            <li>
+                                <a class="inactiveTab" href="/html/admin/gamification.hmtl">Gamification</a>
+                            </li>
+                        </h6>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 content">
+            <div class="container">
+                <div class="mt-5">
+                    <h1 class="mb-5">Add to the existing tutorial</h1>
+                    <div class="d-flex justify-content-between">
+                        <div class="w-50 my-3">
+                            <label for="name" class="my-2">Name</label>
+                            <input type="Name" id="name" class="form-control" aria-describedby="name">
+                        </div>
+
+                        <div class="w-25 my-3">
+                            <label for="tags" class="my-2">Tags</label>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <input type="Name" id="name" class="form-control" aria-describedby="name">
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary" type="submit">Add</button>
+                                </div>
+                            </div>
+                            <label for="tags" class="my-2">Existing Tags</label>
+                        </div>
+                    </div>
+                    <div class="w-25 my-3">
+                        <label for="category" class="my-2">Categoria</label>
+                        <select id="category" class="form-select" aria-label="category">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+                    </div>
+                    <div class="w-75 my-3">
+                        <label for="videourl" class="my-2">Video URL</label>
+                        <input type="videourl" id="videourl" class="form-control" aria-describedby="videourl">
+                    </div>
+                    <div class="w-75 my-3">
+                        <label for="pergunta" class="my-2">Pergunta</label>
+                        <input type="pergunta" id="pergunta" class="form-control" aria-describedby="pergunta">
+                    </div>
+
+                    <label class="my-2">Resposta</label>
+                    <div class="d-flex justify-content-between w-25">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="escolha1cb">
+                            <input class="tboption" type="text" id="escolha1tb" value="Escolha 1">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="escolha2cb">
+                            <input class="tboption" type="text" id="escolha2tb" value="Escolha 2">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between w-25">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="escolha3cb">
+                            <input class="tboption" type="text" id="escolha3tb" value="Escolha 3">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="escolha4cb">
+                            <input class="tboption" type="text" id="escolha4tb" value="Escolha 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-5 float-end me-3" type="submit">Save</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
