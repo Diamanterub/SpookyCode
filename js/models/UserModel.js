@@ -1,4 +1,4 @@
-let     users;
+let users;
 
 // Getting the users from localstorage
 export function init() {
@@ -6,11 +6,11 @@ export function init() {
 }
 
 // Adding a user
-export function add(blocked = false ,rank, username, email, password,level = 0, xp = 0, likes = [], exercisesDone = []) {
+export function add(blocked = false, rank, username, email, password, level = 0, xp = 0, likes = [], exercisesDone = []) {
     if (users.some((user) => user.email === email)) {
         throw Error(`User with this email: "${email}" already exists!`);
     } else {
-        users.push(new User(blocked,rank, username, email, password,level, xp, likes, exercisesDone));
+        users.push(new User(blocked, rank, username, email, password, level, xp, likes, exercisesDone));
         localStorage.setItem("users", JSON.stringify(users));
     }
 }
@@ -61,6 +61,26 @@ export function setLikes(categoryName, action) {
     sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
 }
 
+export function setExercisesDone(subCategoryTitle, xp) {
+    let currentUser = getUserLogged();
+    let index = users.indexOf(currentUser);
+
+    currentUser.exercisesDone.push(subCategoryTitle);
+    currentUser.xp += xp;
+
+    //Update the localstorage array
+    users[index + 1] = currentUser;
+    localStorage.setItem("users", JSON.stringify(users));
+
+    //Update the logged user
+    sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
+
+    //Update the logged user
+    sessionStorage.setItem("justFinished", JSON.stringify({bol: true, xp: xp}));
+
+    
+}
+
 export function getLoggedUserLikes() {
     return getUserLogged().likes;
 }
@@ -77,7 +97,7 @@ class User {
     xp = 0;
     exercisesDone = [];
 
-    constructor(blocked,rank, username, email, password, likes,level, xp, exercisesDone) {
+    constructor(blocked, rank, username, email, password, likes, level, xp, exercisesDone) {
         this.blocked = blocked
         this.rank = rank;
         this.username = username;

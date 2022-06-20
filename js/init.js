@@ -15,7 +15,7 @@ function writeData() {
                 password: "pass1",
                 level: 1,
                 xp: 0,
-                likes: [],  
+                likes: [],
                 exercisesDone: [],
             },
             {
@@ -78,23 +78,39 @@ function writeData() {
                     dateAdded: "1 April",
                     exercise: [{
                             type: "multipleChoice",
-                            xpPerQuestionCorrect:10,
+                            xpPerQuestionCorrect: 10,
                             question: "What is the correct way to declare a variable with naming convention snakeCase?",
                             answers: ["let snakeCase", "let snakecase", "let snakecasE", "let snake_case"],
                             correctAnswer: "let snake_case",
                         },
                         {
                             type: "multipleChoice",
-                            xpPerQuestionCorrect:10,
+                            xpPerQuestionCorrect: 10,
                             question: "I am Tired?",
                             answers: ["Yes", "No", "Maybe", "Tft"],
                             correctAnswer: "Yes",
                         },
                         {
                             type: "editor",
-                            xpPerQuestionCorrect:10,
-                            question: "declare a variable with naming convention snakeCase?",
-                            correctAnswer: "let snake_case",
+                            xpPerQuestionCorrect: 10,
+                            question: "Declare a variable called big apple with the naming convention camelCase?",
+                            settings: [{
+                                    type: "html",
+                                    locked: "true",
+                                    content: ""
+                                },
+                                {
+                                    type: "css",
+                                    locked: "true",
+                                    content: ""
+                                },
+                                {
+                                    type: "js",
+                                    locked: "false",
+                                    content: ""
+                                },
+                            ],
+                            correctAnswer: "let bigApple",
                         }
                     ]
                 }, {
