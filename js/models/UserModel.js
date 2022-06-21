@@ -33,6 +33,11 @@ export function logout() {
     sessionStorage.removeItem("loggedUser");
 }
 
+
+export function getAllUsers(){
+    return users;
+}
+
 // Check if someone is logged right now
 export function isLogged() {
     return sessionStorage.getItem("loggedUser") ? true : false;
@@ -88,6 +93,20 @@ export function getXpUntilNextLevel() {
     let xpPerLevel = JSON.parse(localStorage.getItem("xpPerLevel"));
     let xpUntilNextLevel = xpPerLevel[currentUser.level] - currentUser.xp;
     return xpUntilNextLevel;
+}
+
+export function changePassword(newpassword){
+    let currentUser = getUserLogged();
+    let index = users.indexOf(currentUser);
+
+    currentUser.password = newpassword
+    
+    //Update the localstorage array
+    users[index + 1] = currentUser;
+    localStorage.setItem("users", JSON.stringify(users));
+
+    //Update the logged user
+    sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
 }
 
 class User {

@@ -20,6 +20,17 @@ function writeData() {
             },
             {
                 blocked: false,
+                rank: "student",
+                username: "alasduno",
+                email: "123123a@gmail.com",
+                password: "pass1",
+                level: 1,
+                xp: 500,
+                likes: [],
+                exercisesDone: [],
+            },
+            {
+                blocked: false,
                 rank: "admin",
                 username: "professor",
                 email: "123p@gmail.com",

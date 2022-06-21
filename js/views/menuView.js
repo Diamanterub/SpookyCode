@@ -6,11 +6,12 @@ let selectedSubCategory;
 let selectedCategory;
 
 menuView()
-function menuView() {
+export function menuView() {
     categories.init();
     User.init()
 
     let totalCategories = categories.getCategories();
+    
 
     let categoriesDiv = document.querySelector(".categoriesDiv")
     for (let i = 0; i < totalCategories.length; i++) {
@@ -100,6 +101,18 @@ function menuView() {
         }
     })
 
+    let profileDiv = document.querySelector(".profileDiv")
+    let username = document.querySelector(".username")
+    let level = document.querySelector(".levelProfile")
+
+    profileDiv?.addEventListener("click", () => {
+        location.href = "./profile.html"
+    });
+
+
+    username.innerHTML = User.getUserLogged().username
+    level.innerHTML = `Level ${User.getUserLogged().level}`
+
 
     let totalCategoriesHtml = document.querySelectorAll(".categoryNotSelected")
 
@@ -133,6 +146,9 @@ function menuView() {
                 updateData()
                 if (location.href.includes("wiki")) {
                     wikiView.updateData()
+                }
+                else{
+                    location.href = "/html/wiki.html"
                 }
                 subCategory.classList.replace("subCategoryNotSelected", "subCategorySelected")
                 totalCategoriesHtml.forEach(category => {
@@ -168,7 +184,11 @@ function menuView() {
     });
     updateData()
     if (location.href.includes("wiki")) {
-        wikiView.updateData()
+        // wikiView.updateData()
+    }
+    else if (location.href.includes("profile"))
+    {
+        cleanSelected()
     }
 
 }
@@ -176,4 +196,19 @@ function menuView() {
 function updateData() {
     sessionStorage.setItem("selectedSubCategory", JSON.stringify(selectedSubCategory));
     sessionStorage.setItem("selectedCategory", JSON.stringify(selectedCategory));
+}
+
+export function cleanSelected()
+{
+    //Clean all selection
+    let cleanCategories = document.querySelectorAll(".categorySelected")
+    let cleanSubCategories = document.querySelectorAll(".subCategorySelected")
+
+
+    cleanCategories.forEach(category=> {
+        category.classList.replace("categorySelected", "categoryNotSelected")
+    });
+    cleanSubCategories.forEach(subCategories =>{
+        subCategories.classList.replace("subCategorySelected", "subCategoryNotSelected")
+    })
 }
