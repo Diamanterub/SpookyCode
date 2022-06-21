@@ -41,6 +41,7 @@ function wikiView() {
         updateData()
     }
 
+
 }
 
 export function updateData() {

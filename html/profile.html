@@ -68,7 +68,8 @@
                 <div class="infoDiv">
                     <div class="block">
                         <div class="profileInfo">
-                            <img style="width: 150px;height:150px;border-radius: 120px;border: #101b3b 5px solid;" src="/img/profile.png" class="profileImg" alt="...">
+                            <img style="width: 150px;height:150px;border-radius: 120px;border: #101b3b 5px solid;"
+                                src="/img/profile.png" class="profileImg" alt="...">
                             <div style="height: 50px;display: flex;flex-direction: column;justify-content: center;">
                                 <p class="username" style="font-size: 55px;color: #101b3b;"></p>
                                 <p class="levelProfile" style="font-size: 35px;color: #101b3b;"></p>
@@ -79,39 +80,51 @@
                             <p class="settingsTitle">Settings</p>
 
                             <form class="settingsForm" id="settingsForm">
-                                <div style="display: flex;flex-direction: column;align-items: center;margin-bottom: 25px;">
+                                <div
+                                    style="display: flex;flex-direction: column;align-items: center;margin-bottom: 25px;">
                                     <label class="labelForm" for="password">Old password</label>
                                     <input class="formInput" type="password" id="formLoginEmailOld">
                                 </div>
-            
-                                <div style="display: flex;flex-direction: column;align-items: center;margin-bottom: 25px;">
+
+                                <div
+                                    style="display: flex;flex-direction: column;align-items: center;margin-bottom: 25px;">
                                     <label class="labelForm" for="password">New password</label>
                                     <input class="formInput" type="password" id="formLoginEmailNew">
                                 </div>
 
-                                <div style="display: flex;flex-direction: column;align-items: center;margin-bottom: 25px;">
+                                <div
+                                    style="display: flex;flex-direction: column;align-items: center;margin-bottom: 25px;">
                                     <label class="labelForm" for="password">Confirm your password</label>
                                     <input class="formInput" type="password" id="formLoginEmailConfirm">
                                 </div>
-                
-                                <div style="display: inline-flex;flex-direction: column;align-items: center;margin-top: 20px">
+
+                                <div
+                                    style="display: inline-flex;flex-direction: column;align-items: center;margin-top: 20px">
                                     <button type="submit" class="changePassword">Change</button>
                                     <p class="responseMessage" id="responseLogin"></p>
                                 </div>
-            
+
                             </form>
                         </div>
                     </div>
                     <div class="block">
                         <div class="leaderboards">
-                            <div style="display: inline-flex;width: 100%;justify-content: space-around;border: #101b3b 2px solid;border-bottom: 0px;">
-                                <p>Name</p>
-                                <p>Xp</p>
+                            <div
+                                style="display: inline-flex;width: 100%;justify-content: space-around;border: #101b3b 2px solid;border-bottom: 0px;">
+                                <div style="width:33.33%;display: flex;justify-content: center;">
+                                    <p>Name</p>
+                                </div>
+                                <div style="width:33.33%;display: flex;justify-content: center;">
+                                    <p>Level</p>
+                                </div>
+                                <div style="width:33.33%;display: flex;justify-content: center;">
+                                    <p>Xp</p>
+                                </div>
                             </div>
                             <div class="leaderboardsInner">
 
                             </div>
-                        
+
                         </div>
                     </div>
                 </div>

@@ -144,6 +144,7 @@ export function menuView() {
                 //Find the subCategory object with the same title
                 selectedSubCategory = categories.getSubCategoryByName(subCategory.innerHTML)
                 updateData()
+                categories.updateViewsSubCategories(selectedSubCategory)
                 if (location.href.includes("wiki")) {
                     wikiView.updateData()
                 }

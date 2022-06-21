@@ -188,7 +188,7 @@ h1 {
     justify-content: center;
 }
 
-.profileDiv{
+.profileDiv {
     height: 10%;
     width: 100%;
     margin-bottom: 5px;
@@ -197,14 +197,24 @@ h1 {
     align-items: center;
 }
 
-.profileImg{
+.profileDivExercice {
+    width: 100%;
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.profileImg {
     width: 50px;
     height: 50px;
     border-radius: 50px;
 
 }
 
-.username{
+.username {
     margin: 0;
     font-family: "AmikoSemiBold";
     font-size: 16px;
@@ -212,7 +222,7 @@ h1 {
     margin-left: 25px;
 }
 
-.levelProfile{
+.levelProfile {
     margin: 0;
     font-family: "AmikoSemiBold";
     font-size: 14px;

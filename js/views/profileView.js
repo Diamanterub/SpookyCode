@@ -48,6 +48,7 @@ function profileView() {
                 });
                 //Find the subCategory object with the same title
                 selectedSubCategory = categories.getSubCategoryByName(subCategory.innerHTML)
+                categories.updateViewsSubCategories(selectedSubCategory)
                 updateData()
                 if (location.href.includes("wiki")) {
                     wikiView.updateData()
@@ -123,8 +124,15 @@ function profileView() {
         {    
             leaderBoards.innerHTML += `
             <div style="display: inline-flex;border: #101B3B 2px solid;position: relative;justify-content: space-around;width: 100%;">
+            <div style="width:33.33%;display: flex;justify-content: center;">
             <p class="nameUser">${user.username}</p>
+            </div>
+            <div style="width:33.33%;display: flex;justify-content: center;">
+            <p class="nameUser">${user.level}</p>
+            </div>
+            <div style="width:33.33%;display: flex;justify-content: center;">
             <p class="xpUser">${user.xp}</p>
+            </div>
             </div>`
         }
     });
