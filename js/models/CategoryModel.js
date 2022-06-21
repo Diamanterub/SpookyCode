@@ -69,7 +69,7 @@ export function commentOnSubCategory(subCategory, videoTag = "", comment, user, 
 
 
     let categoryIndex = categories.indexOf(checkWhereSubCategoryIs(subCategory.title));
-    
+
     subCategory.comments.push({
         videoTag,
         comment,
@@ -79,6 +79,15 @@ export function commentOnSubCategory(subCategory, videoTag = "", comment, user, 
 
     //Update the localstorage array
     categories[categoryIndex].subCategory = subCategory;
+    localStorage.setItem("categories", JSON.stringify(categories));
+
+}
+
+
+export function deleteCategory(index) {
+
+    categories.splice(index, 1)
+
     localStorage.setItem("categories", JSON.stringify(categories));
 
 }

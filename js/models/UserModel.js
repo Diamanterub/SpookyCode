@@ -5,6 +5,10 @@ export function init() {
     users = localStorage.users ? JSON.parse(localStorage.users) : [];
 }
 
+export function getUsers() {
+    return users
+}
+
 // Adding a user
 export function add(blocked = false, rank, username, email, password, level = 0, xp = 0, likes = [], exercisesDone = []) {
     if (users.some((user) => user.email === email)) {
@@ -76,13 +80,38 @@ export function setExercisesDone(subCategoryTitle, xp) {
     sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
 
     //Update the logged user
-    sessionStorage.setItem("justFinished", JSON.stringify({bol: true, xp: xp}));
+    sessionStorage.setItem("justFinished", JSON.stringify({ bol: true, xp: xp }));
 
-    
+
 }
 
 export function getLoggedUserLikes() {
     return getUserLogged().likes;
+}
+
+
+export function getUserByUsername(username) {
+    var res = []
+
+    if (username.trim() != "") {
+        for (let user of users) {
+            if (user.username.includes(username))
+                res.push(user)
+        }
+    } else {
+        res = users
+    }
+
+    return res
+}
+
+
+export function deleteUser(user) {
+
+    users.splice(users.indexOf(user), 1)
+
+    localStorage.setItem("users", JSON.stringify(users));
+
 }
 
 

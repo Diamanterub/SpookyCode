@@ -60,12 +60,12 @@
             </div>
 
             <table class="table w-75 mx-auto">
-                <tbody>
+                <thead>
                     <tr>
                         <td colspan="2">
                             <div class="text-center d-flex justify-content-between">
                                 <input type="text" class="form-control" id="addcategory" placeholder="New Category">
-                                <button class="btn btn-primary ms-4" type="submit">Add</button>
+                                <button class="btn btn-primary ms-4" type="submit" onclick="addCategory(document.getElementById('addcategory').value)">Add</button>
                             </div>
                         </td>
                     </tr>
@@ -73,15 +73,15 @@
                         <th>Name</th>
                         <th>Actions</th>
                     </tr>
-                    <tr>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                    </tr>
+                </thead>
+                <tbody id="categoriesTable">
                 </tbody>
             </table>
 
         </div>
     </div>
+
+    <script type="module" src="../../js/views/adminListOfCategoriesView.js"></script>
 
 </body>
 

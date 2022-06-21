@@ -52,7 +52,6 @@
             </div>
         </div>
         <div class="col-9 content">
-
             <div class="container">
                 <div class="mt-5">
                     <h1 class="mb-5">Gamification</h1>
@@ -61,26 +60,31 @@
 
             <div class="w-75 my-3">
                 <label for="level1" class="my-2">Level 1</label>
-                <input type="level1" id="level1" placeholder="100" class="form-control" aria-describedby="level">
+                <input type="level1" id="level1" placeholder="100" class="form-control levelinput" aria-describedby="level">
             </div>
             <div class="w-75 my-3">
                 <label for="level" class="my-2">Level 2</label>
-                <input type="level2" id="level2" placeholder="200" class="form-control" aria-describedby="level">
+                <input type="level2" id="level2" placeholder="200" class="form-control levelinput" aria-describedby="level">
             </div>
             <div class="w-75 my-3">
                 <label for="level" class="my-2">Level 3</label>
-                <input type="level3" id="level3" placeholder="300" class="form-control" aria-describedby="level">
+                <input type="level3" id="level3" placeholder="300" class="form-control levelinput" aria-describedby="level">
             </div>
             <div class="w-75 my-3">
                 <label for="level" class="my-2">Level 4</label>
-                <input type="level4" id="level4" placeholder="300" class="form-control" aria-describedby="level">
+                <input type="level4" id="level4" placeholder="300" class="form-control levelinput" aria-describedby="level">
             </div>
             <div class="w-75 my-3">
                 <label for="level" class="my-2">Level 5</label>
-                <input type="level5" id="level5" placeholder="400" class="form-control" aria-describedby="level">
+                <input type="level5" id="level5" placeholder="400" class="form-control levelinput" aria-describedby="level">
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit" onclick="saveGamification();">Save</button>
             </div>
         </div>
     </div>
+
+    <script type="module" src="../../js/views/adminGamificationView.js"></script>
 
 </body>
 
