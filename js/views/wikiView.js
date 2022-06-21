@@ -21,8 +21,15 @@ function wikiView() {
 
         results.innerHTML = `You received ${infoModal.xp} XP`
 
-        level.innerHTML = `You are ${User.getXpUntilNextLevel()} short of leveling up to the next level`
-
+        if(User.getXpUntilNextLevel() <= 0)
+        {
+            level.innerHTML = `Congrats you reached level ${User.getCurrentUserLevel()}`
+        }
+        else
+        {
+            level.innerHTML = `You are ${User.getXpUntilNextLevel()} short of leveling up to the next level`
+        }
+       
         modal.style.display = "block";
       
         span.onclick = function () {
@@ -34,7 +41,7 @@ function wikiView() {
                 modal.style.display = "none";
             }
         }
-        
+ 
         sessionStorage.removeItem("justFinished");
     }
     if (location.href.includes("wiki")) {

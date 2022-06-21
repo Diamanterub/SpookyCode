@@ -34,7 +34,7 @@ export function logout() {
 }
 
 
-export function getAllUsers(){
+export function getAllUsers() {
     return users;
 }
 
@@ -81,7 +81,10 @@ export function setExercisesDone(subCategoryTitle, xp) {
     sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
 
     //Update the logged user
-    sessionStorage.setItem("justFinished", JSON.stringify({bol: true, xp: xp}));  
+    sessionStorage.setItem("justFinished", JSON.stringify({
+        bol: true,
+        xp: xp
+    }));
 }
 
 export function getLoggedUserLikes() {
@@ -92,15 +95,34 @@ export function getXpUntilNextLevel() {
     let currentUser = getUserLogged();
     let xpPerLevel = JSON.parse(localStorage.getItem("xpPerLevel"));
     let xpUntilNextLevel = xpPerLevel[currentUser.level] - currentUser.xp;
+    if (xpUntilNextLevel <= 0) {
+
+        currentUser.level += 1;
+        let index = users.indexOf(currentUser);
+
+        //Update the localstorage array
+        users[index + 1] = currentUser;
+        localStorage.setItem("users", JSON.stringify(users));
+
+        //Update the logged user
+        sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
+
+    }
     return xpUntilNextLevel;
 }
 
-export function changePassword(newpassword){
+export function getCurrentUserLevel(){
+
+   return getUserLogged().level;
+}
+
+
+export function changePassword(newpassword) {
     let currentUser = getUserLogged();
     let index = users.indexOf(currentUser);
 
     currentUser.password = newpassword
-    
+
     //Update the localstorage array
     users[index + 1] = currentUser;
     localStorage.setItem("users", JSON.stringify(users));
