@@ -54,6 +54,52 @@ function menuView() {
         }
     }
 
+    let searchInput = document.querySelector(".searchInput")
+    searchInput.addEventListener("keyup", () => {
+        if (searchInput.value == "") {
+            categoriesDiv.innerHTML = 
+            `
+            <div class="level1">
+                    <p class="levelNeeded">Level 1</p>
+
+                </div>
+                <div class="level2">
+                    <p class="levelNeeded">Level 2</p>
+
+                </div>
+                <div class="level3">
+                    <p class="levelNeeded">Level 3</p>
+
+                </div>
+                <div class="level4">
+                    <p class="levelNeeded">Level 4</p>
+
+                </div>
+                <div class="level5">
+                    <p class="levelNeeded">Level 5</p>
+
+                </div>
+                `
+            menuView()
+        }
+        else {
+            for (let i = 0; i < categoriesDiv.children.length; i++) {
+                categoriesDiv.children[i].innerHTML = ""
+            }
+            for (let i = 0; i < totalCategories.length; i++) {
+
+                totalCategories[i].subCategories.forEach(subCategory => {
+                    if (subCategory.tags.includes(searchInput.value)) {
+                        categoriesDiv.innerHTML += `<div><p class="subCategoryNotSelected">${subCategory.title}</p></div>`
+                    }
+                    else{
+                    }
+                });
+                
+            }
+        }
+    })
+
 
     let totalCategoriesHtml = document.querySelectorAll(".categoryNotSelected")
 
