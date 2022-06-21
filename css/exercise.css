@@ -91,7 +91,7 @@
 
 .previousResult {
     font-family: "AmikoRegular";
-    font-size: 16px;
+    font-size: 20px;
     margin: 0px;
     color: #ffffff;
     margin-top: 25px;
@@ -123,7 +123,7 @@
     background-color: #EFF2F7;
     color: #101B3B;
     font-family: "AmikoSemiBold";
-    font-size: 20px;
+    font-size: 25px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -153,7 +153,7 @@
 
 .answer {
     font-family: "AmikoRegular";
-    font-size: 20px;
+    font-size: 25px;
     padding-left: 10px;
     cursor: default;
 }
@@ -175,11 +175,11 @@
 }
 
 .submit {
-    height: 30px;
+    height: 40px;
     background-color: #101B3B;
     color: #ffffff;
-    width: 120px;
-    font-size: 16px;
+    width: 140px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
 }
@@ -198,18 +198,7 @@
 
 
 
-#runButton {
-    height: 30px;
-    background-color: #101B3B;
-    color: #ffffff;
-    width: 80px;
-    font-size: 16px;
-    border: none;
-}
 
-#runButton:focus-visible {
-    outline: none;
-}
 
 .editor {
     width: 100%;
@@ -260,11 +249,11 @@
 }
 
 .submitCodeEditor {
-    height: 30px;
+    height: 40px;
     background-color: #101B3B;
     color: #ffffff;
-    width: 120px;
-    font-size: 16px;
+    width: 140px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
 }
@@ -276,5 +265,5 @@
 .progress{
     border-color: #101B3B;
     font-family: "AmikoRegular";
-    font-size: 14px;
+    font-size: 16px
 }
