@@ -17,8 +17,11 @@ function wikiView() {
         let span = document.getElementsByClassName("close")[0];
 
         let results = document.querySelector(".results")
+        let level = document.querySelector(".level")
 
-        results.innerHTML = `You have finished the exercise!\nYou received ${infoModal.xp} XP`
+        results.innerHTML = `You received ${infoModal.xp} XP`
+
+        level.innerHTML = `You are ${User.getXpUntilNextLevel()} short of leveling up to the next level`
 
         modal.style.display = "block";
       

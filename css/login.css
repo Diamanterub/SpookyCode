@@ -87,14 +87,14 @@ h1 {
 .titleStyle2 {
     font-family: 'AmikoBold';
     color: #ffffff;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* Login and Register div Stuff */
 
 .loginRegisterDiv {
-    margin-bottom: 120px;
-    width: 280px;
+    margin-bottom: 10px;
+    width: 320px;
     height: 360px;
     background-color: #f5f8f8;
     align-self: center;
@@ -156,6 +156,14 @@ label {
     font-size: 16px;
     color: #101B3B;
     padding-left: 10px;
+}
+
+.labelForm{
+    font-family: 'AmikoSemiBold';
+    font-size: 16px;
+    color: #101B3B;
+    padding-left: 0px;
+    margin-bottom: 5px;
 }
 
 .formInput {
@@ -225,5 +233,17 @@ label {
 
     .titleStyle2 {
         font-size: 35px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .navBar {
+        height: 70px;
+    }
+    .titleStyle1{
+        font-size: 35px;
+    }
+    .titleStyle2{
+        font-size: 25px;
     }
 }

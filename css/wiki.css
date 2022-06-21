@@ -165,11 +165,12 @@
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
+    background-color: #eff2f7;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 20%;
+    margin-top: 15%;
   }
   
   /* The Close Button */
@@ -185,4 +186,13 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .results{
+    font-family: "AmikoRegular";
+    font-size: 16px;
+  }
+  .title{
+    font-family: "AmikoSemiBold";
+    font-size: 20px;
   }

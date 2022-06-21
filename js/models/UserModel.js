@@ -76,15 +76,19 @@ export function setExercisesDone(subCategoryTitle, xp) {
     sessionStorage.setItem("loggedUser", JSON.stringify(currentUser));
 
     //Update the logged user
-    sessionStorage.setItem("justFinished", JSON.stringify({bol: true, xp: xp}));
-
-    
+    sessionStorage.setItem("justFinished", JSON.stringify({bol: true, xp: xp}));  
 }
 
 export function getLoggedUserLikes() {
     return getUserLogged().likes;
 }
 
+export function getXpUntilNextLevel() {
+    let currentUser = getUserLogged();
+    let xpPerLevel = JSON.parse(localStorage.getItem("xpPerLevel"));
+    let xpUntilNextLevel = xpPerLevel[currentUser.level] - currentUser.xp;
+    return xpUntilNextLevel;
+}
 
 class User {
     blocked = false;
