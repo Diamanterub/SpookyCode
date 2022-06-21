@@ -17,9 +17,19 @@ function wikiView() {
         let span = document.getElementsByClassName("close")[0];
 
         let results = document.querySelector(".results")
+        let level = document.querySelector(".level")
 
-        results.innerHTML = `You have finished the exercise!\nYou received ${infoModal.xp} XP`
+        results.innerHTML = `You received ${infoModal.xp} XP`
 
+        if(User.getXpUntilNextLevel() <= 0)
+        {
+            level.innerHTML = `Congrats you reached level ${User.getCurrentUserLevel()}`
+        }
+        else
+        {
+            level.innerHTML = `You are ${User.getXpUntilNextLevel()} short of leveling up to the next level`
+        }
+       
         modal.style.display = "block";
       
         span.onclick = function () {
@@ -31,12 +41,13 @@ function wikiView() {
                 modal.style.display = "none";
             }
         }
-        
+ 
         sessionStorage.removeItem("justFinished");
     }
     if (location.href.includes("wiki")) {
         updateData()
     }
+
 
 }
 

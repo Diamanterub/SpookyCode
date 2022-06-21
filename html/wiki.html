@@ -12,23 +12,54 @@
 <body>
     <div class="bigContainer">
 
-        <div class="sideBar">
+        <div class="sideBarOuter" style="width: 20%;background-color: #101b3b;height: auto;">
+            <div class="sideBar">
 
-            <div class="titleDiv">
-                <img style="width: 15%;height: 15%;" src="../img/Logo.png" alt="...">
-                <div style="color: #FFFFFF;">
-                    <h1 style="display: flex;align-content: center;align-items: center;font-family: 'AmikoBold';">
-                        Tutorial</h1>
-                    <p class="timeLastUpdated">Last updated yesterday</p>
+                <div class="titleDiv">
+                    <img style="width: 25%;height: 25%;" src="../img/Logo.png" alt="...">
+                    <div style="color: #FFFFFF;">
+                        <h1
+                            style="display: flex;align-content: center;align-items: center;font-family: 'AmikoBold';font-size: 55px;">
+                            Tutorial</h1>
+                        <p class="timeLastUpdated">Last updated yesterday</p>
+                    </div>
                 </div>
-            </div>
-            <div class="searchDiv">
-                <label style="font-family: 'AmikoRegular';color: #FFFFFF;font-size: 14px;" for="test">Search for
-                    Tags</label>
-                <input class="searchInput" type="text">
-            </div>
-            <div class="categoriesDiv">
+                <div class="searchDiv">
+                    <label style="font-family: 'AmikoRegular';color: #FFFFFF;font-size: 14px;" for="test">Search for
+                        Tags</label>
+                    <input class="searchInput" type="text">
+                </div>
+                <div class="line" style="margin-top: 0px;border-color:#FFFFFF"></div>
+                <div class="profileDiv">
+                    <img src="/img/profile.png" class="profileImg" alt="...">
+                    <div style="height: 50px;display: flex;flex-direction: column;justify-content: center;">
+                        <p class="username"></p>
+                        <p class="levelProfile"></p>
+                    </div>
+                </div>
+                <div class="line" style="margin-top: 0px;border-color:#FFFFFF"></div>
+                <div class="categoriesDiv">
+                    <div class="level1">
+                        <p class="levelNeeded">Level 1</p>
 
+                    </div>
+                    <div class="level2">
+                        <p class="levelNeeded">Level 2</p>
+
+                    </div>
+                    <div class="level3">
+                        <p class="levelNeeded">Level 3</p>
+
+                    </div>
+                    <div class="level4">
+                        <p class="levelNeeded">Level 4</p>
+
+                    </div>
+                    <div class="level5">
+                        <p class="levelNeeded">Level 5</p>
+
+                    </div>
+                </div>
             </div>
         </div>
         <div class="contentContainer">
@@ -101,9 +132,20 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <p class="title">You finished the exercise</p>
                 <p class="results"></p>
+                <p class="level" style="font-family: 'AmikoRegular';font-size: 16px;"></p>
             </div>
         </div>
+
+        <div id="myModalLevel" class="modal">
+            <div class="modal-content-level">
+                <span class="closeLevel">&times;</span>
+                <p class="levelNeededModal"></p>
+            </div>
+        </div>
+
+
     </div>
 </body>
 

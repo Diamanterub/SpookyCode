@@ -58,9 +58,9 @@ function updateData() {
                 previousResult.innerHTML = `You have done this exercise before`
             }
         });
-        if(previousResult.innerHTML == ""){
-            previousResult.innerHTML = `Points in this exercise: ${exerciseXpTotal}`
-        }
+    }
+    if(previousResult.innerHTML == ""){
+        previousResult.innerHTML = `Points in this exercise: ${exerciseXpTotal}`
     }
 
 

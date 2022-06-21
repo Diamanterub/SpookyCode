@@ -64,6 +64,18 @@ export function updateCategories(changedCategory) {
     localStorage.setItem("categories", JSON.stringify(categories));
 }
 
+export function updateViewsSubCategories(subCategorySelected){
+
+    let categoryIndex = categories.indexOf(checkWhereSubCategoryIs(subCategorySelected.title));
+    subCategorySelected.views = subCategorySelected.views + 1;
+
+
+    console.log(subCategorySelected.views);
+    //Update the localstorage array
+    categories[categoryIndex].subCategorySelected = subCategorySelected;
+    localStorage.setItem("categories", JSON.stringify(categories));
+}
+
 
 export function commentOnSubCategory(subCategory, videoTag = "", comment, user, date) {
 
