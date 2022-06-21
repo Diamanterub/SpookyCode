@@ -96,9 +96,9 @@ export function getXpUntilNextLevel() {
     let xpPerLevel = JSON.parse(localStorage.getItem("xpPerLevel"));
     let xpUntilNextLevel = xpPerLevel[currentUser.level] - currentUser.xp;
     if (xpUntilNextLevel <= 0) {
+        let index = index = users.indexOf(currentUser);
 
         currentUser.level += 1;
-        let index = users.indexOf(currentUser);
 
         //Update the localstorage array
         users[index + 1] = currentUser;
